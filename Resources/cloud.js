@@ -31,8 +31,6 @@ function sendPiccy(_args) {
 	        alert('Error:\\n' +
 	            ((e.error && e.message) || JSON.stringify(e)));
 	    }
-	    // release the file
-	    _args = null;
 	});
 }
 exports.sendPiccy = sendPiccy;

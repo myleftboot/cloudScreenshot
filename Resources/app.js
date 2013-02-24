@@ -35,9 +35,9 @@ function sendPiccyToCloud(_args) {
     var file = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, 'cloudThis.png');
     file.write(_args.media);
     // then send this file to the Cloud
-    alert(file.name);
+
     forex.sendPiccy(file.name);
-    
+    file = null;
 }
 var thePhoto = Ti.UI.createImageView({height: '30%', width: '30%'});
 

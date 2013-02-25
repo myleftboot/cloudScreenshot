@@ -39,9 +39,6 @@ function sendPiccyToCloud(_args) {
     forex.sendPiccy(file.name);
     file = null;
 }
-var thePhoto = Ti.UI.createImageView({height: '30%', width: '30%'});
-
-
 
 options.add(emailFromLibrary);
 options.add(thePhoto);

@@ -4,8 +4,8 @@
 // this sets the background color of the master UIView (when there are no windows/tab groups on it)
 Titanium.UI.setBackgroundColor('#000');
 
-var forex = require('/cloud');
-forex.init();
+var upload = require('/cloud');
+upload.init();
 // create base root window
 //
 var win1 = Titanium.UI.createWindow({  
@@ -36,7 +36,7 @@ function sendPiccyToCloud(_args) {
     file.write(_args.media);
     // then send this file to the Cloud
 
-    forex.sendPiccy(file.name);
+    upload.sendPiccy(file.name);
     file = null;
 }
 

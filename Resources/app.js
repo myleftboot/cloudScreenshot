@@ -14,9 +14,9 @@ var win1 = Titanium.UI.createWindow({
 
 var options = Ti.UI.createView({layout: 'vertical'});
 
-var emailFromLibrary = Ti.UI.createButton({title: 'Send photo to the cloud'});
+var sendPhoto = Ti.UI.createButton({title: 'Send photo to the cloud'});
 
-emailFromLibrary.addEventListener('click', function(e) {
+sendPhoto.addEventListener('click', function(e) {
 	Ti.Media.openPhotoGallery({
 		autoHide:   true,
 		mediaTypes: [Ti.Media.MEDIA_TYPE_PHOTO],
@@ -40,7 +40,7 @@ function sendPiccyToCloud(_args) {
     file = null;
 }
 
-options.add(emailFromLibrary);
+options.add(sendPhoto);
 options.add(thePhoto);
 win1.add(options);
 win1.open();
